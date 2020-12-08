@@ -1,0 +1,303 @@
+* {
+  color: #ffff;
+}
+img {
+  width: 100%;
+  vertical-align: text-top;
+}
+body {
+  background-color: #0a0628;
+}
+.playArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-position: center;
+  background-size: contain;
+}
+.playArea > .clickArea {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playArea > .clickArea .component {
+  position: relative;
+  width: 45%;
+  height: 30%;
+}
+
+.playArea > .clickArea .pointer {
+  display: flex;
+  justify-content: center;
+  /* z-index: 1000; */
+  position: absolute;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.playArea > .clickArea .pointer img {
+  transform: translateY(-120%);
+  width: 40%;
+}
+
+.playArea > .clickArea .img {
+  z-index: 100;
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.playArea > .clickArea .img > img {
+  display: block;
+  width: 40%;
+  margin: auto;
+  transition: width 0.8s;
+}
+.playArea > .clickArea .img > img:hover {
+  display: block;
+  width: 40%;
+  margin: auto;
+  cursor: pointer;
+}
+
+#rouletteArea {
+  /* position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; */
+  position: absolute;
+  transition: transform 3s;
+  width: 68%;
+  height: 68%;
+  /* margin-right: auto; */
+}
+#rouletteArea.notran {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.textArea {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+}
+.rouletteText {
+  display: block;
+  position: absolute;
+  white-space: pre;
+}
+.modal-body {
+  padding: 20px 10px;
+}
+.modalHead .close {
+  font-weight: 700;
+  color: #000;
+  font-size: 40px;
+}
+.modalHead {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.modalBody {
+  padding: 20px;
+}
+.modalBody p {
+  color: #000;
+}
+.modalMainTitle p {
+  color: #ac0b75;
+  font-size: 36px;
+  font-weight: bold;
+}
+.modalFooter {
+  display: flex;
+  justify-content: center;
+}
+.modalFooter > button {
+  box-shadow: inset 0px 1px 0px 0px #fbafe3;
+  background: linear-gradient(to bottom, #ff5bb0 5%, #ef027d 100%);
+  background-color: #ff5bb0;
+  border-radius: 42px;
+  border: 1px solid #ee1eb5;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 9px 24px;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #c70067;
+}
+#result,
+#postResult {
+  color: #3a3839;
+  font-size: 40px;
+  text-align: center;
+}
+.activity_text_title {
+  font-size: 36px;
+}
+.ligh_bl {
+  color: #5aeff1;
+}
+.activity_text {
+  padding: 0 10%;
+  font-size: 1rem;
+}
+.section1 {
+  background: url(imgs/game_bg.gif) no-repeat;
+  padding-top: 100%;
+  /* height: 100%; */
+  position: relative;
+  background-size: 100% auto;
+}
+.money {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  width: 50%;
+}
+.money1 {
+  position: absolute;
+  z-index: 99;
+  top: 5%;
+  left: 5%;
+}
+.money2 {
+  position: absolute;
+  z-index: 99;
+  top: 20%;
+  left: 10%;
+}
+.money3 {
+  position: absolute;
+  z-index: 99;
+  top: 5%;
+  right: 5%;
+}
+.money4 {
+  position: absolute;
+  z-index: 99;
+  top: 20%;
+  right: 10%;
+}
+
+.section_roulette {
+  z-index: 200;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  /* background-color: #0a0628; */
+}
+.section_text {
+  background-color: #0a0628;
+}
+.textArea * {
+  color: #000;
+}
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+.moneyAnime {
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@media screen and (min-width: 484px) {
+  .money {
+    width: 40%;
+  }
+  .playArea > .clickArea .component {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .money {
+    width: 30%;
+  }
+  .playArea > .clickArea .component {
+    width: 20%;
+  }
+  .section1 {
+    padding-top: 70%;
+  }
+}
+@media screen and (min-width: 996px) {
+  .section1 {
+    padding-top: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section1 {
+    padding-top: 40%;
+  }
+  .playArea > .clickArea .component {
+    width: 15%;
+  }
+  #rouletteArea {
+    width: 50%;
+    height: 68%;
+  }
+}
